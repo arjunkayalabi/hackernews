@@ -52,9 +52,6 @@ function App() {
 			{/* <SearchAppBar query={query} /> */}
 
 			<Container>
-				<br />
-				<br />
-
 				{/* <InputBase
 					placeholder="Search…"
 					// classes={{
