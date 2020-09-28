@@ -120,9 +120,6 @@ function App() {
 				<br />
 				<br />
 				<br />
-				<br />
-				<br />
-				<br />
 				<AlignItemsList results={results} isLoading={isLoading} />
 			</Container>
 		</>
