@@ -83,8 +83,10 @@ function App() {
 				<h2
 					style={{
 						color: "#303F9E",
+						display: "inline",
 						fontFamily: "'Audiowide', cursive",
 						marginTop: 0,
+						paddingLeft: 10,
 					}}
 				>
 					Hacker News
@@ -93,6 +95,7 @@ function App() {
 					onSubmit={handleSubmit}
 					style={{
 						float: "right",
+						marginTop: "35px",
 					}}
 				>
 					<input
@@ -135,6 +138,10 @@ function App() {
 				<br />
 				<br />
 				<br />
+				<br />
+				<br />
+				<br />
+
 				{results && (
 					<AlignItemsList results={results} isLoading={isLoading} />
 				)}
