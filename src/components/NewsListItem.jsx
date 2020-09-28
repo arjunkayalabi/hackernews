@@ -34,9 +34,11 @@ export default function AlignItemsList({ results, isLoading }) {
 							<ListItem alignItems="flex-start">
 								<ListItemAvatar>
 									<Avatar
-										alt="Remy Sharp"
-										src="/static/images/avatar/1.jpg"
-									/>
+										aria-label="Author"
+										alt="Author Initial"
+									>
+										{result.author.charAt(0).toUpperCase()}
+									</Avatar>
 								</ListItemAvatar>
 								<a
 									href={result.url}
