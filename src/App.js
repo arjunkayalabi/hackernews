@@ -6,7 +6,7 @@ import SearchAppBar from "./components/AppSearchBar";
 
 function App() {
 	const [results, setResults] = useState([]);
-	const [query, setQuery] = useState("react hooks");
+	const [query, setQuery] = useState("how to be successful");
 	const [isLoading, setIsLoading] = useState(false);
 	const searchInputRef = useRef();
 
