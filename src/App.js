@@ -96,7 +96,7 @@ function App() {
 						onChange={handleChange}
 						ref={searchInputRef}
 					/>
-					<Button
+					{/* <Button
 						variant="contained"
 						color="primary"
 						onClick={getResults}
@@ -106,7 +106,7 @@ function App() {
 						}}
 					>
 						Search
-					</Button>
+					</Button> */}
 					<Button
 						variant="contained"
 						color="secondary"
