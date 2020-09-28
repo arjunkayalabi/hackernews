@@ -8,6 +8,7 @@ function App() {
 	const [results, setResults] = useState([]);
 	const [query, setQuery] = useState("how to be successful");
 	const [isLoading, setIsLoading] = useState(false);
+	const [error, setError] = useState(null);
 	const searchInputRef = useRef();
 
 	// useEffect(() => {
@@ -21,14 +22,18 @@ function App() {
 
 	useEffect(() => {
 		getResults();
-	}, [query]);
+	}, []);
 
 	const getResults = async () => {
 		setIsLoading(true);
-		const response = await axios.get(
-			`https://hn.algolia.com/api/v1/search?query=${query}`
-		);
-		setResults(response.data.hits);
+		try {
+			const response = await axios.get(
+				`https://hn.algolia.com/api/v1/search?query=${query}`
+			);
+			setResults(response.data.hits);
+		} catch (err) {
+			setError(err);
+		}
 		setIsLoading(false);
 	};
 
@@ -93,7 +98,7 @@ function App() {
 						onChange={handleChange}
 						ref={searchInputRef}
 					/>
-					{/* <Button
+					<Button
 						variant="contained"
 						color="primary"
 						onClick={getResults}
@@ -103,7 +108,7 @@ function App() {
 						}}
 					>
 						Search
-					</Button> */}
+					</Button>
 					<Button
 						variant="contained"
 						color="secondary"
@@ -120,7 +125,12 @@ function App() {
 				<br />
 				<br />
 				<br />
-				<AlignItemsList results={results} isLoading={isLoading} />
+				{results && (
+					<AlignItemsList results={results} isLoading={isLoading} />
+				)}
+				{error && (
+					<h3 style={{ color: "red" }}>Error: {error.message}</h3>
+				)}
 			</Container>
 		</>
 	);
