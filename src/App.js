@@ -133,6 +133,8 @@ function App() {
 				<br />
 				<br />
 				<br />
+				<br />
+				<br />
 				{results && (
 					<AlignItemsList results={results} isLoading={isLoading} />
 				)}
