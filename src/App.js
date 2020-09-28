@@ -21,7 +21,7 @@ function App() {
 
 	useEffect(() => {
 		getResults();
-	}, []);
+	}, [query]);
 
 	const getResults = async () => {
 		setIsLoading(true);
