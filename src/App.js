@@ -73,10 +73,18 @@ function App() {
 						width: 200,
 					}}
 				/> */}
+				{/* <img src="../public/apple-touch-icon.png" alt="hat-logo" /> */}
+				<img
+					src="./favicon.ico"
+					alt="hat-logo"
+					style={{ marginTop: "5px" }}
+				/>
+
 				<h2
 					style={{
 						color: "#303F9E",
 						fontFamily: "'Audiowide', cursive",
+						marginTop: 0,
 					}}
 				>
 					Hacker News
