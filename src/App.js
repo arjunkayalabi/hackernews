@@ -71,6 +71,14 @@ function App() {
 						width: 200,
 					}}
 				/> */}
+				<h2
+					style={{
+						color: "#303F9E",
+						fontFamily: "'Audiowide', cursive",
+					}}
+				>
+					Hacker News
+				</h2>
 				<form
 					onSubmit={handleSubmit}
 					style={{
